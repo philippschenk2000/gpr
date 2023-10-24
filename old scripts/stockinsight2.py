@@ -95,7 +95,6 @@ def main():
 
 def get_candlesticks(symbol, tage):
     url = "https://cloud.iexapis.com/stable/stock/" + symbol + "/chart/max"
-    payload = {'token': "pk_e34bceaad39545de99147557c9c0b969", 'chartLast': tage + 300}
     r = requests.get(url, params=payload)
     r.raise_for_status()
     prices = r.json()

@@ -773,7 +773,6 @@ def pictures_analysis(apple_offers):
                     print(i)
                     older_data = pd.read_csv('csv_data/reverse_image_search.csv')
                     url = i
-                    headers = {"apikey": "12d2efd0-7c09-11ed-86ca-b3a1042760f5"}
                     params = (("image_url", str(url)),("gl", "DE"),("hl", "de"),)
 
                     response = requests.get('https://app.zenserp.com/api/v2/search', headers=headers, params=params)

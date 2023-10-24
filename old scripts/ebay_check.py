@@ -59,8 +59,6 @@ def main():
     for i in range(0, 1):
         for i in df_offers_apple_clean['offer-ID']:
             #i = 2294764916
-            j = ("http://api.scraperapi.com?api_key=cf1dfe285ad7b62e5387b4ad6e3fe1b5&url=https://www.ebay-kleinanzeigen.de/s-anzeige/{}".format(i))
-            print(j.replace('http://api.scraperapi.com?api_key=cf1dfe285ad7b62e5387b4ad6e3fe1b5&url=', ''))
             user_agent = choice(agents)
             headers = {'User-Agent': user_agent}
             html = requests.get(url=j, headers=headers).content

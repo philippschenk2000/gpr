@@ -170,8 +170,6 @@ def get_company_jobs2(agents, companies_list):
     for y in range(0, len(companies_list)):
         if companies_list[y] not in df2['company']:
             c1 = companies_linkedin[str(companies_list[y])]
-            i = 'http://api.scraperapi.com?api_key=cf1dfe285ad7b62e5387b4ad6e3fe1b5&url=https://www.linkedin.com/jobs/search/?f_C={}&f_JT=F&f_TPR=r604800&geoId=92000000&sortBy=DD'.format(c1)
-            print(i.replace('http://api.scraperapi.com?api_key=cf1dfe285ad7b62e5387b4ad6e3fe1b5&url=', ''))
             user_agent = choice(agents)
             headers = {'User-Agent': user_agent}
             html = requests.get(url=i, headers=headers).text
@@ -524,7 +522,6 @@ def get_job_descriptions(agents):
     for j in range(0, len(df)):
         description = []
         if df['company'][j] != 'lalabumbum' and str(df['absolute_url'][j]) not in df3['absolute_url']:
-            i = 'http://api.scraperapi.com?api_key=cf1dfe285ad7b62e5387b4ad6e3fe1b5&url={}'.format(df['absolute_url'][j])
             print(df['absolute_url'][j])
             user_agent = choice(agents)
             headers = {'User-Agent': user_agent}
@@ -664,7 +661,6 @@ def get_job_descriptions(agents):
 
 def descriptions(df):
 
-    OPENAI_API_KEY = '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'
     openai.api_key = OPENAI_API_KEY
 
     keywords_for_frame = []

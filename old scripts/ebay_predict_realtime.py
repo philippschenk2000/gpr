@@ -118,7 +118,6 @@ def main2(offer_idd, agents):
 
     getofferurls = []
     for i in range(0, 1):
-        getofferurls.append("http://api.scraperapi.com?api_key=cf1dfe285ad7b62e5387b4ad6e3fe1b5&url=https://www.ebay-kleinanzeigen.de//s-anzeige/{}".format(offer_id))
     for i in getofferurls:
         user_agent = choice(agents)
         headers = {'User-Agent': user_agent}
@@ -127,7 +126,6 @@ def main2(offer_idd, agents):
         sel = Selector(text=html)
         profiles = sel.css('html body#vap div.site-base div.site-base--content div#site-content.l-page-wrapper.l-container-row section#viewad-main.l-container-row section#viewad-cntnt.l-row.a-double-margin.l-container-row aside#viewad-sidebar.a-span-8.l-col div#viewad-profile-box.l-container-row.contentbox--vip.no-shadow.j-sidebar-content div#viewad-contact div.l-container-row ul.iconlist li span.iconlist-text span.text-body-regular-strong.text-force-linebreak a::attr(href)').extract()
         if len(profiles) > 0:
-            y = ('http://api.scraperapi.com?api_key=cf1dfe285ad7b62e5387b4ad6e3fe1b5&url=https://www.ebay-kleinanzeigen.de' + profiles[0])
 
             for f in range(0, 1):
                 i = y
@@ -334,8 +332,6 @@ def getofferurl(sel):
     links = []
     link = sel.css('a.ellipsis::attr(href)').extract()
     for x in link:
-        x = 'http://api.scraperapi.com?api_key=cf1dfe285ad7b62e5387b4ad6e3fe1b5&url=https://www.ebay-kleinanzeigen.de' + x
-        #x = 'http://api.scraperapi.com?api_key=cf1dfe285ad7b62e5387b4ad6e3fe1b5&url=https://www.ebay-kleinanzeigen.de/s-anzeige/iphone-xs-64-gb-schwarz/2287490948-173-6424'
         links.append(x)
 
     return links
@@ -402,8 +398,6 @@ def getprofiles(sel, i):
             shipping = sel.css('p.aditem-main--middle--price-shipping--shipping::text').extract() # ['', 'Versand möglich', ]
             offerlinks = sel.css('a.ellipsis::attr(href)').extract()
 
-        print(i.replace('http://api.scraperapi.com?api_key=cf1dfe285ad7b62e5387b4ad6e3fe1b5&url=', ''))
-        userid.append(i.replace('http://api.scraperapi.com?api_key=cf1dfe285ad7b62e5387b4ad6e3fe1b5&url=https://www.ebay-kleinanzeigen.de/s-bestandsliste.html?userId=', ''))
 
         usertype3 = []
         for sub in usertype:
@@ -548,7 +542,6 @@ def profileswithoffers(df, headers, newest_offer):
                 i = i.split('-')[-3]
                 i = i.split('/')
                 i = i[-1]
-                y = ('http://api.scraperapi.com?api_key=cf1dfe285ad7b62e5387b4ad6e3fe1b5&url=https://www.ebay-kleinanzeigen.de/s-anzeige/' + i)
                 html = requests.get(url=y, headers=headers).content
                 sel = Selector(text=html)
 

@@ -2337,8 +2337,6 @@ def portfolio():
                                 #https://lmt.fn.sportradar.com/common/de/Etc:UTC/gismo/match_timelinedelta/42726005
                                 url = "https://sofascores.p.rapidapi.com/v1/search/multi"
                                 querystring = {"query": str(home_team), "group": "teams"}
-                                headers = {"X-RapidAPI-Key": "2885728984mshb8658cb6bc10346p1bb3f4jsnc01ad14ae0df",
-                                           "X-RapidAPI-Host": "sofascores.p.rapidapi.com"}
                                 response = requests.get(url, headers=headers, params=querystring)
                                 jdata = response.json()
                                 try:

@@ -224,7 +224,6 @@ def backtesting(df1, symbol):
 
 def get_candlesticks(symbol):
     url = "https://cloud.iexapis.com/stable/stock/" + symbol + "/chart/max"        #Euronext Brussels (BRU): -BB XETRA (ETR): -GY Euronext Paris (PAR): -FP London Stock Exchange (LON): -LN
-    payload = {'token': "pk_e34bceaad39545de99147557c9c0b969", 'chartLast': 2500}
     r = requests.get(url, params=payload)
     r.raise_for_status()
     prices = r.json()
