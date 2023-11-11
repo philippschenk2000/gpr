@@ -15,7 +15,7 @@ def main():
             rest = zahl % 2
             ohnerest = zahl - rest
             zahl = ohnerest / 2
-            #print(zahl, 'rest is:', rest)
+            print(zahl, 'rest is:', rest)
             binary_list.append(rest)
         # REVERSE THE APPENDED LIST AND THEN PRINT EVERY ELEMENT
         reversed_list = list(reversed(binary_list))
@@ -35,6 +35,6 @@ main()
 # 5 : 2 = 2 R 1
 # 2 : 2 = 1 R 0
 # 1 : 2 =
+# 1011 = 1*2^0 + 1*2^1 + 0*2^2 + 1*2^3 = 1+2+8 = 11
 
 # Hexa / Oktal?
-# 1011 = 1*2^0 + 1*2^1 + 0*2^2 + 1*2^3 = 1+2+8 = 11
