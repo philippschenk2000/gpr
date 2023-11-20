@@ -2,13 +2,13 @@ def main():
     __author__ = "7093700, Schenk"
     try:
         # INPUT OF NUMBER
-        zahl = int(input('Enter a beautiful number: '))
+        zahl = float(input('Enter a beautiful number: '))
         # CASE: INPUT = 0
         if zahl == 0:
             print('The binary number (8-bit) would be: \n0')
         # CASE: INPUT UNDER 0
         elif zahl < 0:
-            zahl = zahl & (2**8 - 1)
+            zahl = zahl
         # USUAL PROCESSING: DIVIDING BY 2 TIL NO REST
         binary_list = []
         while zahl != 0:
