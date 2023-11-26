@@ -1,10 +1,10 @@
-""" This script contains 5 different functions for the new exercise in epr """
+""" This script contains the new exercise in gpr """
 
 __author__ = "7093700, Schenk"
 
 
 def main():
-    """ This function creates a list full of tuples containing a card color and a card value.
+    """ This function checks one string (haystack) on the existence of one other string (needle).
 
     """
     # INPUT IS EVERY TIME A STRING
