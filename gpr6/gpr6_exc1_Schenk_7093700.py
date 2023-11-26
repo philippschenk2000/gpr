@@ -1,6 +1,12 @@
-def main():
-    __author__ = "7093700, Schenk"
+""" This script contains the new exercise in gpr """
 
+__author__ = "7093700, Schenk"
+
+
+def main():
+    """ This function plays with the string how it should be done in the exercise.
+
+    """
     text = "Ich mag programmieren"
     a = text[::-1][::2]
     print(a)
