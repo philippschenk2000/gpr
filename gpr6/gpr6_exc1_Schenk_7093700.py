@@ -18,6 +18,7 @@ def main():
     print(d)
     e = text[-2:][::-1]
     print(e)
+    print(text[-2:-9:-2])
     for g in range(len(text), 0, -1):
         if g in [2, 4, 6, 8]:
             print(text[len(text) - g:len(text) - g+1], end='')
