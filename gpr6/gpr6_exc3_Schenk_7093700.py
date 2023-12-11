@@ -12,7 +12,7 @@ def main():
     haystack = input('haystack: ')
     # ITERATION THRU EVERY CHARACTER IN HAYSTACK:
     printing = -1
-    for i in range(len(haystack)):
+    for i in range(len(haystack) - len(needle)):
         print(haystack[i:i + len(needle)])
         if haystack[i:i + len(needle)] == needle:
             printing = i
