@@ -65,3 +65,4 @@ print('Bytes required: \n', bytes_required, '\nFulfilled table:')
 average_code_length = sum(len(huffman_code[char]) * frequencies[char] for char in huffman_code)
 average_code_length_rounded = round(average_code_length, 3)
 [print('character:', letter, ', absolute:', sentence.count(letter), ', relative:', round(sentence.count(letter)/characters_len, 3), ', entropy:', round(-sentence.count(letter)/characters_len * math.log2(sentence.count(letter)/characters_len), 3), ', huffman-code:', huffman_code[letter], ', mid code-word-lenth:', average_code_length_rounded) for letter in unique_chars]
+print('u, f, k, b, s, ,, a, m, g, l, h, o, r, i, t, e, n,  ')
